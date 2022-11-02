@@ -200,22 +200,6 @@ else:
     if __name__ == '__main__':
         main()
 
-
-
-url = "https://ronreiter-meme-generator.p.rapidapi.com/meme"
-
-querystring = {"top":"Top Text","bottom":"Bottom Text","meme":"Condescending-Wonka","font_size":"50","font":"Impact"}
-
-headers = {
-	"X-RapidAPI-Key": "54bcf1846fmsh1b05a5481dce663p109f16jsn4614e548a17d",
-	"X-RapidAPI-Host": "ronreiter-meme-generator.p.rapidapi.com"
-}
-
-response = requests.request("GET", url, headers=headers, params=querystring)
-
-print(response.text)
-
-
 num1 = st.number_input('Insert the first number for sum:')
 st.write('The current first number is: ', num1)
 
