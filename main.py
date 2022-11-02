@@ -197,10 +197,6 @@ else:
         home()
 
 
-    if __name__ == '__main__':
-        main()
-# Set the page to a wide layout
-st.set_page_config(layout="wide")
 
 # Title
 st.title("NASA's Astronomy Picture of the Day")
