@@ -209,5 +209,5 @@ headers = {
 
 response = requests.request("GET", url, headers=headers)
 
-df= pd.read_json(response.text)
+df= response.text
 st.dataframe(df)
