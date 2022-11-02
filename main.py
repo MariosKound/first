@@ -199,14 +199,16 @@ else:
 
     if __name__ == '__main__':
         main()
-url = "https://covid-193.p.rapidapi.com/countries"
+url = "https://news67.p.rapidapi.com/v2/topic-search"
+
+querystring = {"languages":"<REQUIRED>","search":"<REQUIRED>"}
 
 headers = {
 	"X-RapidAPI-Key": "54bcf1846fmsh1b05a5481dce663p109f16jsn4614e548a17d",
-	"X-RapidAPI-Host": "covid-193.p.rapidapi.com"
+	"X-RapidAPI-Host": "news67.p.rapidapi.com"
 }
 
-response = requests.request("GET", url, headers=headers)
+response = requests.request("GET", url, headers=headers, params=querystring)
 
 st.write(response.text)
 
