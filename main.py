@@ -216,14 +216,14 @@ with st.sidebar:
     """)
 
 # Set the parameters for a requests call and get the data from the API
-params = {'2pynwdUL7pKFQb33Bieb39tgMHzetg27sjTsnW9p': st.secrets['nasaKey'], 'date': d}
+params = {'': st.secrets['2pynwdUL7pKFQb33Bieb39tgMHzetg27sjTsnW9p'], 'date': d}
 response = requests.get('https://api.nasa.gov/planetary/apod', params=params)
 
 # If there is a response extract the data as JSON
 # and write the fields in the two columns
 if response:
     # Uncomment to see the actual data
-    # st.json(response.json())
+    st.json(response.json())
     data = response.json()
 
     col1, col2 = st.columns(2, gap="small")
