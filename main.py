@@ -197,7 +197,8 @@ else:
         home()
 
 
-
+    if __name__ == '__main__':
+        main()
 
 
 num1 = st.number_input('Insert the first number for sum:')
