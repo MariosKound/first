@@ -214,7 +214,7 @@ with st.sidebar:
     """)
 
 # Set the parameters for a requests call and get the data from the API
-params = {'api_key': st.secrets['nasaKey'], 'date': d}
+params = {'2pynwdUL7pKFQb33Bieb39tgMHzetg27sjTsnW9p': st.secrets['nasaKey'], 'date': d}
 response = requests.get('https://api.nasa.gov/planetary/apod', params=params)
 
 # If there is a response extract the data as JSON
