@@ -200,23 +200,7 @@ else:
     if __name__ == '__main__':
         main()
 
-# Title
-st.title("NASA's Astronomy Picture of the Day")
 
-# Set up the side bar with a date input widget and some introductory text
-with st.sidebar:
-    st.header("APOD")
-    d = st.date_input("Select a date:")
-    # 2022-01-25 for example of video
-    st.write("""NASA have been producing their Astronomy Picture of the Day since 1995. 
-    Sometimes they are images and occasionally they are videos but they are almost invariably spectacular.""")
-
-    st.write("""The official APOD can be found at https://apod.nasa.gov/apod/astropix.html and is updated each day. 
-    This web page lets you choose a particular date and displays the image, and its description, for that day.    
-    """)
-
-params = {'api_key': st.secrets['nasaKey'], 'date':d}
-response = requests.get('https://api.nasa.gov/planetary/apod', params=params)
 
 # Title
 st.title("NASA's Astronomy Picture of the Day")
@@ -233,8 +217,9 @@ with st.sidebar:
     This web page lets you choose a particular date and displays the image, and its description, for that day.    
     """)
 
+st.secrets("")
 # Set the parameters for a requests call and get the data from the API
-params = {'2pynwdUL7pKFQb33Bieb39tgMHzetg27sjTsnW9p': st.secrets['nasaKey'], 'date': d}
+params = {'2pynwdUL7pKFQb33Bieb39tgMHzetg27sjTsnW9p': st.secrets['2pynwdUL7pKFQb33Bieb39tgMHzetg27sjTsnW9p'], 'date': d}
 response = requests.get('https://api.nasa.gov/planetary/apod', params=params)
 
 # If there is a response extract the data as JSON
