@@ -194,6 +194,7 @@ else:
     def main():
         config()
 
+        home()
 
 
     if __name__ == '__main__':
