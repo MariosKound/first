@@ -210,33 +210,33 @@ response = requests.request("GET", url, headers=headers)
 
 st.write(response.text)
 
-num1 = st.number_input('Insert the first number for sum')
-st.write('The current first number is ', num1)
+num1 = st.number_input('Insert the first number for sum:')
+st.write('The current first number is: ', num1)
 
-num2 = st.number_input('Insert the second number for sum')
-st.write('The current second number is ', num2)
+num2 = st.number_input('Insert the second number for sum:')
+st.write('The current second number is: ', num2)
 
 url1='https://oe6pwzxigcj7wygntothidvy4e0kscwh.lambda-url.us-east-1.on.aws/?num1=%f&num2=%f' %(num1,num2)
 response1 = requests.get(url1)
 
 st.write(response1.text)
 
-num3 = st.number_input('Insert the first number for multiplication')
-st.write('The current first number is ', num3)
+num3 = st.number_input('Insert the first number for multiplication:')
+st.write('The current first number is: ', num3)
 
-num4 = st.number_input('Insert the second number for multiplication')
-st.write('The current second number is ', num4)
+num4 = st.number_input('Insert the second number for multiplication:')
+st.write('The current second number is: ', num4)
 
 url2='https://ewpqdd22cbf7qynynquei6kn6i0whfay.lambda-url.us-east-1.on.aws/ ?num3=%f&num4=%f' %(num3,num4)
 response2 = requests.get(url2)
 
 st.write(response2.text)
 
-num5 = st.number_input('Insert the first number for the division')
-st.write('The current number is ', num5)
+num5 = st.number_input('Insert the first number for the division:')
+st.write('The current number is: ', num5)
 
-num6 = st.number_input('Insert the second number for the division')
-st.write('The current number is ', num6)
+num6 = st.number_input('Insert the second number for the division:')
+st.write('The current number is: ', num6)
 
 url3='https://axdqsg57axbtspvilmf5saj6w40bcjtb.lambda-url.us-east-1.on.aws/ ?num5=%f&num6=%f' %(num5,num6)
 response3 = requests.get(url3)
