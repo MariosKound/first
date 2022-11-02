@@ -193,11 +193,7 @@ else:
 
     def main():
         config()
-        with st.sidebar:
-            choice = option_menu("Main Menu", ["Home", 'Other Tab'], icons=['house', 'list-task'], menu_icon="cast",
-                                 default_index=0)
 
-        home() if (choice == "Home") else other_tab()
 
 
     if __name__ == '__main__':
