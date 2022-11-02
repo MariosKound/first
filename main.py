@@ -221,7 +221,7 @@ response1 = requests.get(url1)
 
 st.write(response1.text)
 
-num3 = st.number_input('Insert a number')
+num3 = st.number_input('Insert a number3')
 st.write('The current number is ', num3)
 
 num4 = st.number_input('Insert a numdber')
