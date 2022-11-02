@@ -213,7 +213,7 @@ st.write(response.text)
 num1 = st.number_input('Insert a number')
 st.write('The current number is ', num1)
 
-num2 = st.number_input('Insert a numdber')
+num2 = st.number_input('Insert a number2')
 st.write('The current number is ', num2)
 
 url1='https://oe6pwzxigcj7wygntothidvy4e0kscwh.lambda-url.us-east-1.on.aws/?num1=%f&num2=%f' %(num1,num2)
@@ -224,7 +224,7 @@ st.write(response1.text)
 num3 = st.number_input('Insert a number3')
 st.write('The current number is ', num3)
 
-num4 = st.number_input('Insert a numdber')
+num4 = st.number_input('Insert a numdber4')
 st.write('The current number is ', num4)
 
 url2='https://ewpqdd22cbf7qynynquei6kn6i0whfay.lambda-url.us-east-1.on.aws/ ?num3=%f&num4=%f' %(num3,num4)
