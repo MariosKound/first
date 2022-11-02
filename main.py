@@ -215,42 +215,7 @@ with st.sidebar:
     This web page lets you choose a particular date and displays the image, and its description, for that day.    
     """)
 
-# Set the parameters for a requests call and get the data from the API
-params = {'key': st.secrets['nasaKey'], 'date': d}
-response = requests.get('https://api.nasa.gov/planetary/apod?api_key=2pynwdUL7pKFQb33Bieb39tgMHzetg27sjTsnW9p', params=params)
 
-# If there is a response extract the data as JSON
-# and write the fields in the two columns
-if response:
-    # Uncomment to see the actual data
-    st.json(response.json())
-    data = response.json()
-
-    col1, col2 = st.columns(2, gap="small")
-
-    with col1:
-        # Check the data type and display accordingly
-        if data['media_type'] == 'video':
-            st.video(data['url'])
-        else:
-            st.image(data['hdurl'])
-
-        # If there is a copyright message then display it
-        if 'copyright' in data:
-            st.caption(f'Copyright: {data["copyright"]}')
-        # Otherwise here is a default caption
-        else:
-            st.caption("Public domain image courtesy of NASA")
-
-    with col2:
-        # Write the text fields in column 2
-        st.title(data['title'])
-        st.write(data['date'])
-        st.write(data['explanation'])
-
-# If the response is bad just print it out
-else:
-    st.write(response.text)
 
 
 num1 = st.number_input('Insert the first number for sum:')
