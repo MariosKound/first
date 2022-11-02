@@ -200,14 +200,15 @@ else:
     if __name__ == '__main__':
         main()
 
-url = "https://api-football-v1.p.rapidapi.com/v3/timezone"
+url = "https://instagram47.p.rapidapi.com/post_comments"
+
+querystring = {"postid":"2435143128484144113"}
 
 headers = {
 	"X-RapidAPI-Key": "54bcf1846fmsh1b05a5481dce663p109f16jsn4614e548a17d",
-	"X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
+	"X-RapidAPI-Host": "instagram47.p.rapidapi.com"
 }
 
-response = requests.request("GET", url, headers=headers)
+response = requests.request("GET", url, headers=headers, params=querystring)
 
-df= response.text
-st.dataframe(df)
+print(response.text)
