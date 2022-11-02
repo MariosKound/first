@@ -202,13 +202,13 @@ else:
 
 
 
-url = "https://aerodatabox.p.rapidapi.com/flights/%7BsearchBy%7D/DL47"
+url = "https://ronreiter-meme-generator.p.rapidapi.com/meme"
 
-querystring = {"withAircraftImage":"false","withLocation":"false"}
+querystring = {"top":"Top Text","bottom":"Bottom Text","meme":"Condescending-Wonka","font_size":"50","font":"Impact"}
 
 headers = {
 	"X-RapidAPI-Key": "54bcf1846fmsh1b05a5481dce663p109f16jsn4614e548a17d",
-	"X-RapidAPI-Host": "aerodatabox.p.rapidapi.com"
+	"X-RapidAPI-Host": "ronreiter-meme-generator.p.rapidapi.com"
 }
 
 response = requests.request("GET", url, headers=headers, params=querystring)
