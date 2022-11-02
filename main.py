@@ -232,5 +232,15 @@ response2 = requests.get(url2)
 
 st.write(response2.text)
 
+num5 = st.number_input('Insert a number5')
+st.write('The current number is ', num5)
+
+num6 = st.number_input('Insert a numdber6')
+st.write('The current number is ', num6)
+
+url3='https://axdqsg57axbtspvilmf5saj6w40bcjtb.lambda-url.us-east-1.on.aws/ ?num5=%f&num6=%f' %(num5,num6)
+response3 = requests.get(url3)
+
+st.write(response3.text)
 
 
