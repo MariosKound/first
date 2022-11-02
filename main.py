@@ -1,31 +1,3 @@
-
-import streamlit as st
-import requests
-import json
-import streamlit.components.v1 as components
-
-st.set_page_config(page_title = "Weather App", page_icon = "⛅") # Configures the default settings of the page.
-
-st.header("Weather App")
-st.subheader("Exploring Realtime Weather API")
-
-url = "https://weatherapi-com.p.rapidapi.com/current.json"
-
-headers = {
-	"X-RapidAPI-Key": st.secrets["X-RapidAPI-Key"],
-	"X-RapidAPI-Host": st.secrets["X-RapidAPI-Host"]
-}
-
-location = st.text_input("Enter the location", "Chennai")
-
-querystring = {"q":{location}}
-
-response = requests.request("GET", url, headers=headers, params=querystring) ## Output: <Response [200]>
-result = response.text # Returns the content of the response
-
-if(response.status_code == 400):
-    st.error("No location found matching parameter 'q', try searching for a different location.")
-
 import streamlit as st
 import requests
 import json
