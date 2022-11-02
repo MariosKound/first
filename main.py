@@ -199,16 +199,15 @@ else:
 
     if __name__ == '__main__':
         main()
-
-url = "https://instagram47.p.rapidapi.com/post_comments"
-
-querystring = {"postid":"2435143128484144113"}
+url = "https://covid-193.p.rapidapi.com/countries"
 
 headers = {
 	"X-RapidAPI-Key": "54bcf1846fmsh1b05a5481dce663p109f16jsn4614e548a17d",
-	"X-RapidAPI-Host": "instagram47.p.rapidapi.com"
+	"X-RapidAPI-Host": "covid-193.p.rapidapi.com"
 }
 
-response = requests.request("GET", url, headers=headers, params=querystring)
+response = requests.request("GET", url, headers=headers)
 
 st.write(response.text)
+
+
