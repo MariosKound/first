@@ -210,4 +210,14 @@ response = requests.request("GET", url, headers=headers)
 
 st.write(response.text)
 
+num1 = st.number_input('Insert a number')
+st.write('The current number is ', num1)
+
+num2 = st.number_input('Insert a number')
+st.write('The current number is ', num2)
+
+url1='https://zkr4u6mlbk7p6pgg4xnh3rbqbi0swkqn.lambda-url.us-east-1.on.aws/?num1=%f&num2=%f' %(num1,num2)
+response1 = requests.request(url)
+
+st.write(response1.text)
 
