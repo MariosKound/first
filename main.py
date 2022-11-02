@@ -199,13 +199,13 @@ else:
 
     if __name__ == '__main__':
         main()
-url = "https://news67.p.rapidapi.com/v2/topic-search"
+url = "https://currency-converter5.p.rapidapi.com/currency/convert"
 
-querystring = {"languages":"<REQUIRED>","search":"<REQUIRED>"}
+querystring = {"format":"json","from":"AUD","to":"CAD","amount":"1"}
 
 headers = {
 	"X-RapidAPI-Key": "54bcf1846fmsh1b05a5481dce663p109f16jsn4614e548a17d",
-	"X-RapidAPI-Host": "news67.p.rapidapi.com"
+	"X-RapidAPI-Host": "currency-converter5.p.rapidapi.com"
 }
 
 response = requests.request("GET", url, headers=headers, params=querystring)
