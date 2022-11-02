@@ -200,7 +200,18 @@ else:
     if __name__ == '__main__':
         main()
 
+url = "https://aerodatabox.p.rapidapi.com/flights/%7BsearchBy%7D/DL47"
 
+querystring = {"withAircraftImage":"false","withLocation":"false"}
+
+headers = {
+	"X-RapidAPI-Key": "54bcf1846fmsh1b05a5481dce663p109f16jsn4614e548a17d",
+	"X-RapidAPI-Host": "aerodatabox.p.rapidapi.com"
+}
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)
 
 # Title
 st.title("NASA's Astronomy Picture of the Day")
