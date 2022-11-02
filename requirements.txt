@@ -5,3 +5,16 @@ requests
 Pillow
 streamlit_folium
 streamlit_option_menu
+flask
+flask-cors
+gunicorn
+Jinja
+Werkzeug
+beautifulsoup4
+requests
+coverage
+nose
+setupext-janitor
+bs4
+mock
+Pillow
