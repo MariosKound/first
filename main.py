@@ -200,6 +200,17 @@ else:
     if __name__ == '__main__':
         main()
 
+url = "https://covid-19-coronavirus-statistics2.p.rapidapi.com/countriesData"
+
+headers = {
+	"X-RapidAPI-Key": "54bcf1846fmsh1b05a5481dce663p109f16jsn4614e548a17d",
+	"X-RapidAPI-Host": "covid-19-coronavirus-statistics2.p.rapidapi.com"
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+
 num1 = st.number_input('Insert the first number for sum:')
 st.write('The current first number is: ', num1)
 
